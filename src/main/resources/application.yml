@@ -1,0 +1,58 @@
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:development}
+server:
+#  ssl:
+#    key-store:
+#      ./config/https/keystore.p12
+#    key-store-password:
+#      password
+#    keyStoreType:
+#      PKCS12
+#    keyAlias:
+#      tomcat
+  port:
+    8081
+#  http:
+#    port:
+#      8080
+#  redis:
+#    host: qa-kronos-redis.ad.mgage.io
+#    port: 6379
+#    database: 0
+#    password: testpass
+#    pool:
+#      blockExhausted: true
+#      maxActive: 250
+#      maxIdle: 20
+#      maxWait: 250
+#      TimeBetweenEvictionRunsMillis: -1
+#  redis:
+#    mode: sentinel
+#    sentinel:
+#      master: devmaster
+#      nodes:
+#        10.252.14.72:26379,10.252.14.73:26379,10.252.14.74:26379
+##        10.252.12.24:26379,10.252.12.25:26379,10.252.12.26:26379
+#    host: 127.0.0.1
+##    port: 6379
+#    database: 0
+##    password: testpass
+#    password: a-password
+#    pool:
+#      blockExhausted: true
+#      maxActive: 250
+#      maxIdle: 20
+#      maxWait: 250
+#      TimeBetweenEvictionRunsMillis: -1
+
+
+
+logging:
+  mode: INFO
+  file: log/application.log
+  pattern:
+    console: "%d %-5level %logger{6} [%t]: %msg%n"
+    file: "%d %-5level [%thread] %logger{6} : %msg%n"
+  level:
+    com.mgage: INFO
